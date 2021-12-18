@@ -54,7 +54,7 @@
             <!-- <a href="#" id="menu-empanadas-button" class="a-links">Empanadas</a> -->
         </div>
         <div class="food-div" onclick="changeMenuBebidas();">Bebidas
-            <a href="#" id="menu-bebidas-button" class="a-links">Bebidas</a>
+            <!-- <a href="#" id="menu-bebidas-button" class="a-links">Bebidas</a> -->
         </div>
     </article>
     <!--Menu-pizza-->
@@ -167,20 +167,22 @@
         </div>
 
         <!--Horarios del local-->
-        <div class="container-horarioDeAtencion">
-            <h2>Horarios de atencion</h2>
-            <div class="content-izq">
-                <p >Lunes: <strong>CERRADO</strong></p>
-                <p >Martes: <strong>19pm - 23pm</strong></p>
-                <p >Miercoles: <strong>19pm - 23pm</strong></p>
-            </div>
-
-            <div class="content-der" >
-                <p>Jueves: <strong>19pm - 02am</strong></p>
-                <p>Viernes: <strong>17pm - 03am</strong></p>
-                <p>Sabado: <strong>17pm - 05am</strong></p>
-                <p>Domingo: <strong>17am - 02am</strong></p>
-            </div>
+        <div class="container-horarios">
+            <h2 class="text-center">Horarios de atencion</h2>
+            <section class="container-horarioDeAtencion">
+                <div class="content-izq">
+                    <p >Lunes: <strong>CERRADO</strong></p>
+                    <p >Martes: <strong>19pm - 23pm</strong></p>
+                    <p >Miercoles: <strong>19pm - 23pm</strong></p>
+                </div>
+    
+                <div class="content-der">
+                    <p>Jueves: <strong>19pm - 02am</strong></p>
+                    <p>Viernes: <strong>17pm - 03am</strong></p>
+                    <p>Sabado: <strong>17pm - 05am</strong></p>
+                    <p>Domingo: <strong>17am - 02am</strong></p>
+                </div>
+            </section>
         </div>
     </article>
 </section>
@@ -190,24 +192,29 @@
 <aside class="contacto-container ">
     <div class="content-center grid-container-contacto">
         <h2 id="contacto" class="text-center">Contacto</h2>
-        <p>Pedidos telefonicos, Delivery sin cargo al <strong>11-123-456</strong>
+        <p>- Pedidos telefonicos, Delivery sin cargo al <strong>11-123-456</strong>
 
         </p>
         <!-- <p>Martes y jueves <strong>2x1</strong>En pizzas de anana</p> -->
-        <p>Servicio de catering para fiestas</p>
-        <p>Para <strong>Reservas</strong>, servicio de <strong>Catering</strong> y <strong>Consultas</strong>
-            completar el formulario</p>
+        <p>- Servicio de catering para fiestas</p>
+        <p>- Para <strong>Reservas</strong>, servicio de <strong>Catering</strong> y <strong>Consultas: </strong></p>
 
-        <label for="name-input"><input type="text" id="name-input" placeholder="Nombre" required></label>
-        <br>
+        <h3 class="text-center">  completar el formulario.</h3>
+        <div>
+            <label for="name-input">Nombre :</label>
+            <input type="text" id="name-input" placeholder="Nombre" required>
+        </div>
+        
             <div>
-                <label for="option-form">Tipo de servicio</label>
-                <select name="" id="option-form">
+                <label for="option-form">Tipo de servicio :</label>
+                <br>  
+                <select class="select-option" name="" id="option-form">
                     <option value="0" selected disabled>Elegir:</option>
                     <option value="1">Reserva</option>
                     <option value="2">Catering</option>
                     <option value="3">Consultas</option>
                 </select>
+                
                 <!-- <fieldset>
                     <legend>Garantía</legend>
         
@@ -222,23 +229,30 @@
         
                 </fieldset> -->
             </div>
-        <input type="number" min="0" max="10" placeholder="Cantidad de personas (10 Max)" required>
-        <br>
-
+        <!-- <div>
+            <label class="margin-left" for="cant-person">Numero de personas: </label>
+            <input id="cant-person" type="number" min="0" max="10" placeholder="Cantidad de personas (10 Max)" required>
+        
+        </div> -->
         <!-- <input type="date" placeholder="01/01/21"> -->
-        <label for="">
-            <input type="email" id="email-input" placeholder="Email: ejemplo@correo.com" required>
+        <div>
+            <label  for="email-input">Email
+                <input type="email" id="email-input" placeholder="Email: ejemplo@correo.com" required>
+    
+            </label>
+            
+        </div>
 
-        </label>
-        <br>
-
+        <div>
+            <label for="message-input">Mensaje :</label>
         <input type="text" id="message-input" placeholder="Mensaje o Peticion Especial">
-        <br>
+        
+        </div>
         <button class="btn-form" onclick="solicitarReserva();">Solicitar </button>
     </div>
 </aside>
 
-<footer class="footer">Todos los derechos reservados &copy; <br> <a href="#inicio">Volver al inicio</a></footer>
+<footer class="footer">Todos los derechos reservados &copy; <br> <a href="#">Volver al inicio</a></footer>
 
 
 <script src="main.js"></script>
